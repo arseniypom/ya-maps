@@ -1,0 +1,26 @@
+{
+  "name": "ya-maps",
+  "version": "1.0.0",
+  "description": "With it you can leave feadback about any place in Moscow (not only) and see others' feedback.",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack serve --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arseniypom/ya-maps.git"
+  },
+  "author": "Arseniy Pomazkov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arseniypom/ya-maps/issues"
+  },
+  "homepage": "https://github.com/arseniypom/ya-maps#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^5.3.1",
+    "webpack": "^5.37.0",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
