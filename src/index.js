@@ -1,3 +1,4 @@
-let var1 = require('./module1');
-console.log(var1);
-// console.log(123);
+import './styles/styles.css';
+import GeoReview from './geoReview';
+
+new GeoReview();
