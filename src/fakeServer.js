@@ -4,13 +4,12 @@ export default class FakeServer {
   }
 
   getCoords() {
-    return JSON.parse(this.storage.getItem('coords'));
+    return JSON.parse(this.storage.getItem('coords')) || {};
   }
 
   async getList(coords) {
     let coordsObj = await this.getCoords();
     if (Object.keys(coordsObj).includes(coords)) {
-      // console.log(coordsObj[coords]);
       return coordsObj[coords];
     }
   }

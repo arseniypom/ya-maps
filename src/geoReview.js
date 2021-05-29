@@ -42,7 +42,6 @@ class GeoReview {
 
     if (reviews) {
       for (const item of reviews) {
-        console.log(item);
         const review = document.createElement('div');
         review.classList.add('review-item');
         review.innerHTML = `
