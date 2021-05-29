@@ -15,7 +15,7 @@ export default class InteractiveMap {
       const ymapsSctipt = document.createElement('script');
       ymapsSctipt.src = 'https://api-maps.yandex.ru/2.1/?apikey=af2fff1c-c80e-4641-ad1e-a5ee154d2c30&lang=ru_RU';
       document.body.appendChild(ymapsSctipt);
-      ymapsSctipt.addEventListener('load', resolve)
+      ymapsSctipt.addEventListener('load', resolve);
     });
   }
 
@@ -38,6 +38,7 @@ export default class InteractiveMap {
       zoom: 10,
     });
     this.map.events.add('click', (e) => this.onClick(e.get('coords')));
+    this.map.geoObjects.add(this.clusterer)
   }
 
   openBalloon(coords, content) {

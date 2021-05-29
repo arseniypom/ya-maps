@@ -1,20 +1,16 @@
 export default class FakeServer {
   constructor() {
     this.storage = window.localStorage;
-    this.storage.setItem('coords', JSON.stringify({
-      '[55.76, 37.64]': [
-        {name: 'test', place:'place123', text:'text12345678909876543'}
-      ]
-    }));
   }
 
   getCoords() {
     return JSON.parse(this.storage.getItem('coords'));
   }
 
-  getList(coords) {
-    let coordsObj = this.getCoords();
+  async getList(coords) {
+    let coordsObj = await this.getCoords();
     if (Object.keys(coordsObj).includes(coords)) {
+      // console.log(coordsObj[coords]);
       return coordsObj[coords];
     }
   }
@@ -39,5 +35,6 @@ export default class FakeServer {
       }
     }
     this.storage.setItem('coords', JSON.stringify(newCoordsObj));
+    return {}
   }
 }
